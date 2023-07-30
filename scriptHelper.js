@@ -30,11 +30,11 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    if (validateInput(pilot) == "Empty" || validateInput(copilot) == "Empty" || validateInput(fuelLevel) =="Empty" || validateInput(cargoLevel)=="Empty") {
-     window.alert("All fields are required");
+     alert("All fields are required");
    } else if (validateInput(fuelLevel) == "Not a Number" || validateInput(cargoLevel) == "Not a Number") {
-     window.alert("Make sure to enter valid information for each field!");
+     alert("Make sure to enter valid information for each field!");
    } else if(validateInput(pilot) =="Is a Number" || validateInput(copilot) == "Is a Number") {
-     window.alert("Make sure to enter valid information for each field!");
+     alert("Make sure to enter valid information for each field!");
    } else {
      list.style.visibility = "visible";
      document.getElementById("pilotStatus").innerHTML=`Pilot ${pilot} is ready for launch`;
